@@ -1,0 +1,14 @@
+{
+  "name": "typescript-websocket-leaflet",
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "author": "cowglow",
+  "scripts": {
+    "dev": "docker compose"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}

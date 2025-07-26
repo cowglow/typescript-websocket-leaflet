@@ -1,0 +1,25 @@
+services:
+  geolocation:
+    image: geolocation-service:dev
+    working_dir: /server
+    build:
+      context: "services/geolocation"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./services/geolocation:/app
+    stdin_open: true
+    tty: true
+#  webapp:
+#    image: webapp-service:dev
+#    working_dir: /app
+#    build:
+#      context: "services/webapp"
+#    ports:
+#      - "3000:3000"
+#    volumes:
+#      - ./services/webapp:/app
+#    stdin_open: true
+#    tty: true
+
+

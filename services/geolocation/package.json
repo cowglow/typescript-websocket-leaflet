@@ -1,0 +1,22 @@
+{
+  "name": "geolocation",
+  "version": "0.0.1",
+  "description": "Geolocation Server (with Sockets)",
+  "keywords": [],
+  "license": "MIT",
+  "author": "@cowglow",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "fastify": "^5.4.0",
+    "ts-node": "^10.9.2",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}

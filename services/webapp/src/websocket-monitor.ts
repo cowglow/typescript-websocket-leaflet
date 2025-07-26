@@ -1,4 +1,4 @@
-const WS_URL = 'ws://localhost:8080';
+const WS_URL = 'ws://localhost:9090';
 
 export function setupWebSocketMonitor(textarea: HTMLTextAreaElement) {
     const ws = new WebSocket(WS_URL);

@@ -2,7 +2,7 @@ import {WebSocketServer} from 'ws';
 
 type Point = { x: number; y: number };
 
-const wss = new WebSocketServer({port: 8080});
+const wss = new WebSocketServer({port: 9090});
 
 function getRandomPoint(): Point {
     return {

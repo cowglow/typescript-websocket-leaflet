@@ -6,6 +6,6 @@ textarea.readOnly = true;
 textarea.style.width = '100%';
 textarea.style.height = '300px';
 textarea.style.fontFamily = 'monospace';
-document.body.appendChild(textarea);
+document.getElementById("app")?.appendChild(textarea);
 
 setupWebSocketMonitor(textarea);

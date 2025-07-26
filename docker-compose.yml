@@ -7,19 +7,21 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./services/geolocation:/app
+      - ./services/geolocation:/server
+#    command: npm run server
     stdin_open: true
     tty: true
-#  webapp:
-#    image: webapp-service:dev
-#    working_dir: /app
-#    build:
-#      context: "services/webapp"
-#    ports:
-#      - "3000:3000"
-#    volumes:
-#      - ./services/webapp:/app
-#    stdin_open: true
-#    tty: true
+  webapp:
+    image: webapp-service:dev
+    working_dir: /webapp
+    build:
+      context: "services/webapp"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./services/webapp:/webapp
+#    command: npm run dev
+    stdin_open: true
+    tty: true
 
 

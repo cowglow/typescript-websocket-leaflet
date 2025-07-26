@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "docker compose"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
   "devDependencies": {
     "typescript": "^5.5.3"
   }

@@ -1,8 +1,9 @@
 :root {
-    --padding: 1rem
+    --padding: 1rem;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,15 +17,10 @@ body {
     padding: var(--padding);
 }
 
-body * {
-    /*flex: 1*/
-}
-
 #app {
     display: flex;
     flex-direction: column;
     flex: 1;
-    /*justify-content: flex-end;*/
 }
 
 #app textarea {

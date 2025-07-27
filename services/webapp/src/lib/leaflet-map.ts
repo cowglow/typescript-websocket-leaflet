@@ -1,7 +1,9 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { AUTHENTICATION, WS_URL } from "../constants.ts";
-// import { greenIcon } from "./leaflet-map-icons.ts";
+import { greenIcon } from "./leaflet-map-icons.ts";
+
+let markerCount = 0;
 
 export function createLeafletMap() {
 	const mapContainer = document.createElement("div");
@@ -48,8 +50,13 @@ function setupWebSocketInterface(map: L.Map) {
 	ws.onmessage = (event) => {
 		const data: MessageType = JSON.parse(event.data);
 		if (data.type === "point") {
-			// const marker = L.marker([data.point.x, data.point.y], { icon: greenIcon }).addTo(map);
-			const marker = L.marker([data.point.y, data.point.x]).addTo(map);
+			markerCount++;
+			const useGreen = markerCount % 5 === 0;
+			const markerPosition: L.LatLngExpression = [data.point.y, data.point.x];
+			const marker = useGreen
+				? L.marker(markerPosition, { icon: greenIcon })
+				: L.marker(markerPosition);
+			marker.addTo(map);
 			marker.bindTooltip(`<pre>${JSON.stringify(marker.getLatLng(), null, 2)}</pre>`);
 			bounds.extend(marker.getLatLng());
 			map.fitBounds(bounds);

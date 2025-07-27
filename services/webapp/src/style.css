@@ -1,0 +1,36 @@
+:root {
+    --padding: 1rem
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    padding: var(--padding);
+}
+
+body * {
+    /*flex: 1*/
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*justify-content: flex-end;*/
+}
+
+#app textarea {
+    flex: 1;
+}
+
+#map {
+    height: 520px;
+}

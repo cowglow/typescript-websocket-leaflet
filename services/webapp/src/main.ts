@@ -1,11 +1,7 @@
 import './style.css';
-import { setupWebSocketMonitor } from './websocket-monitor';
+import {createWebSocketViewer} from "./lib/web-socket-viewer.ts";
+import {createLeafletMap} from "./lib/leaflet-map.ts";
 
-const textarea = document.createElement('textarea');
-textarea.readOnly = true;
-textarea.style.width = '100%';
-textarea.style.height = '300px';
-textarea.style.fontFamily = 'monospace';
-document.getElementById("app")?.appendChild(textarea);
-
-setupWebSocketMonitor(textarea);
+const appBase = document.getElementById("app")!;
+appBase.appendChild(createWebSocketViewer());
+appBase.appendChild(createLeafletMap());

@@ -8,6 +8,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev": "node console.log('Starting Geolocation Server...') && npx ts-node server.ts",
     "server": "npx ts-node server.ts",
     "test": "vitest run --reporter=verbose"
   },

@@ -6,9 +6,10 @@ services:
       context: "services/geolocation"
     ports:
       - "8080:8080"
+      - "9090:9090"
     volumes:
       - ./services/geolocation:/server
-#    command: npm run server
+    command: "npm run server"
     stdin_open: true
     tty: true
   webapp:
@@ -20,7 +21,7 @@ services:
       - "3000:3000"
     volumes:
       - ./services/webapp:/webapp
-#    command: npm run dev
+    command: "npm run dev"
     stdin_open: true
     tty: true
 
